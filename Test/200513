@@ -1,0 +1,22 @@
+from selenium import webdriver
+from time import sleep
+from time import ctime
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.common.exceptions import NoSuchElementException
+import time
+import os
+from selenium.webdriver.support.select import Select
+
+dr = webdriver.Chrome()
+dr.get('https://www.baidu.com/')
+
+dr.find_element_by_id('kw').send_keys('selenium')
+dr.find_element_by_id('su').click()
+dr.set_window_size(500,500)
+js="window.scrollTo(500,600);"
+dr.execute_script(js)
+sleep(2)
