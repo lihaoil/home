@@ -33,4 +33,4 @@ def open_file(in_file):
     print(list)
 
 if __name__ == '__main__':
-    open_file('../data/data1.xlsx')
+    open_file('../first_pytest/data/data1.xlsx')

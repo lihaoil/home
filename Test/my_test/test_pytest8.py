@@ -30,7 +30,7 @@ def test_logout(request):
     return id,count,page
 
 
-@pytest.mark.parametrize('test_logout', test_dict_2,indirect=True)
+@pytest.mark.parametrize('test_logout', test_dict_2, indirect=True)
 @pytest.mark.parametrize('test_login', test_dict_1, indirect=True)
 def test_login_logout(test_login,test_logout):
     assert test_login, '请输入密码'
